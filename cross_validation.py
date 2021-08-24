@@ -1,4 +1,5 @@
 # import pandas and model_selection module of scikit-learn
+import logging
 import pandas as pd
 import numpy as np
 from sklearn import model_selection
@@ -45,6 +46,7 @@ class CrossValidation(object):
 
         # save the new excel with kfold column 
         df.to_excel("train_folds.xlsx", index=False)
+        logging.info('kfold done and updated excel saved!')
         return
 
     '''
@@ -77,6 +79,7 @@ class CrossValidation(object):
 
         # save the new excel with kfold column 
         df.to_excel("train_folds.xlsx", index=False)
+        logging.info('stratified kfold for classification done and updated excel saved!')
         return
 
     '''
@@ -113,5 +116,6 @@ class CrossValidation(object):
 
         # save the new excel with kfold column 
         df.to_excel("train_folds.xlsx", index=False)
+        logging.info('stratified kfold for regression done and updated excel saved!')
         return 
     
