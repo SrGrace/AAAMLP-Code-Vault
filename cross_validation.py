@@ -4,6 +4,14 @@ import numpy as np
 from sklearn import model_selection
 
 
+'''
+Cross-validation techniques include:
+    • k-fold cross-validation
+    • stratified k-fold cross-validation
+    • hold-out based validation
+    • leave-one-out cross-validation
+    • group k-fold cross-validation
+'''
 class CrossValidation(object):
     def __init__(self) -> None:
         return
@@ -106,5 +114,4 @@ class CrossValidation(object):
         # save the new excel with kfold column 
         df.to_excel("train_folds.xlsx", index=False)
         return 
-    
     
