@@ -212,6 +212,18 @@ class EvaluationMetrics(object):
             return metrics.confusion_matrix(y_true, y_pred)
         else:
             return
+        
+    def classification_report(self, y_true, y_pred, module_flag="sklearn"):
+        """
+            Function to calculate confusion_matrix
+            :param y_true: list of true values
+            :param y_pred: list of predicted values
+            :return: confusion_matrix
+        """
+        if module_flag == 'sklearn':
+            return metrics.classification_report(y_true, y_pred)
+        else:
+            return
 
     '''
     for multi-label classification
