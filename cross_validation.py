@@ -1,4 +1,3 @@
-# import pandas and model_selection module of scikit-learn
 import logging
 import pandas as pd
 import numpy as np
